@@ -9,20 +9,24 @@ tableData.forEach((sighting) => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => {
         var cell = row.append("td");
+        // capitalize the city name
         if (key === "city") {
             cell.text(value.charAt(0).toUpperCase() + value.substring(1));
         }
+        // capitalize the state
         else if (key === "state") {
             cell.text(value.toUpperCase());
         }
+        // capitalize the country
         else if (key === "country") {
             cell.text(value.toUpperCase());
         }
+        // capitalise the shape name
         else if (key === "shape") {
-            cell.text(value.charAt(0).toUpperCase() + value.substring(1));
+        cell.text(value.charAt(0).toUpperCase() + value.substring(1));
         }
         else{
-            cell.text(value);
+        cell.text(value);
         };
     });
 });
@@ -45,21 +49,26 @@ button.on("click", function() {
 
     tbody.html("");
 
+    // check if inputValue is blank and button is click. Replace full set of data
     if (inputValue === "") {
         // Place the data into a table
         tableData.forEach((sighting) => {
             var row = tbody.append("tr");
             Object.entries(sighting).forEach(([key, value]) => {
                 var cell = row.append("td");
+                // capitalize the city name
                 if (key === "city") {
                     cell.text(value.charAt(0).toUpperCase() + value.substring(1));
                 }
+                // capitalize the state
                 else if (key === "state") {
                     cell.text(value.toUpperCase());
                 }
+                // capitalize the country
                 else if (key === "country") {
                     cell.text(value.toUpperCase());
                 }
+                // capitalise the shape name
                 else if (key === "shape") {
                     cell.text(value.charAt(0).toUpperCase() + value.substring(1));
                 }
@@ -69,7 +78,8 @@ button.on("click", function() {
             });
         });
     }
-
+    
+    // add check to see if the date is included in the data
     else if (dates.includes(inputValue) === false) {
         var row = tbody.append("tr");
         var cell = row.append("td");
@@ -82,15 +92,19 @@ button.on("click", function() {
             var row = tbody.append("tr");
             Object.entries(sighting).forEach(([key, value]) => {
                 var cell = row.append("td");
+                // capitalize the city name
                 if (key === "city") {
                     cell.text(value.charAt(0).toUpperCase() + value.substring(1));
                 }
+                // capitalize the state
                 else if (key === "state") {
                     cell.text(value.toUpperCase());
                 }
+                // capitalize the country
                 else if (key === "country") {
                     cell.text(value.toUpperCase());
                 }
+                // capitalise the shape name
                 else if (key === "shape") {
                     cell.text(value.charAt(0).toUpperCase() + value.substring(1));
                 }
